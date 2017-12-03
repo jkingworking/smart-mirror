@@ -1,0 +1,34 @@
+@import '../../../node_modules/react-day-picker/lib/style.css';
+
+.component-calendar-widget {
+	white-space: nowrap;
+}
+
+.calendar-widget__date {
+	margin-bottom: 2rem;
+}
+
+.component-calendar-widget .calendar-widget__calendar {
+	font-size: 1rem;
+}
+
+.DayPicker-Month {
+	margin: 0;
+	width: calc(7 * 2.5rem);
+}
+
+.component-calendar-widget .DayPicker-Caption,
+.component-calendar-widget .DayPicker-NavBar {
+	display: none;
+}
+
+.component-calendar-widget .DayPicker-Day--today {
+	background: white;
+	color: black;
+	border-radius: 50%;
+}
+
+.component-calendar-widget .DayPicker-Day {
+	width: 1.5em;
+	height: 1.5em;
+}

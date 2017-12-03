@@ -1,0 +1,29 @@
+@import './components/Calendar-widget/styles.css';
+@import './components/Clock-widget/styles.css';
+@import './components/Weather-widget/styles.css';
+@import './components/Widget/styles.css';
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.column-left {
+  flex: 0;
+}
+
+.column-right {
+  flex: 0;
+}
+
+h1 {
+  font-size: 5em;
+  margin: 0;
+  line-height: 1;
+}

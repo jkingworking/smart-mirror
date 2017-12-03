@@ -1,0 +1,7 @@
+{
+  "name": "Clock-widget",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Clock-widget.js",
+  "style": "./styles.css"
+}

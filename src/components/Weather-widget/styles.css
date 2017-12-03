@@ -1,0 +1,21 @@
+@import '../Five-day-forecast/styles.css';
+
+.component-weather-widget {}
+
+.weather-city {
+	text-align: right;
+	border-bottom: 1px solid white;
+	padding-bottom: 0.5rem;
+	margin-bottom: 2rem;
+}
+
+.current-weather {
+	display: flex;
+	align-items: center;
+}
+
+.current-weather__icon {
+	margin-right: 3rem;
+}
+
+.current-weather__temp{}
