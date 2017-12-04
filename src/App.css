@@ -4,39 +4,33 @@
 @import './components/Widget/styles.css';
 
 .App {
-  text-align: center;
-  min-height: 100vh;
-  background: #000;
-  color: #fff;
-  font-size: 2rem;
-  overflow: hidden;
-  max-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  /*align-items: flex-start;*/
-  /*justify-content: space-between;*/
-}
-
-.App {
-
+	background: #000;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	font-size: 2.5rem;
+	max-height: 100vh;
+	min-height: 100vh;
+	overflow: hidden;
+	padding-left: 1em;
+	text-align: center;
 }
 
 @media (min-width: 800px) {
-  .App {
-    /*flex-direction: row;*/
-  }
+	.App {
+		justify-content: center;
+	}
 }
 
 h1 {
-  font-size: 4em;
-  margin: 0;
-  line-height: 1;
+	font-size: 4em;
+	margin: 0;
+	line-height: 1;
 }
 
 h2 {
-  font-size: 3em;
-  margin: 0;
-  line-height: 1;
+	font-size: 3em;
+	margin: 0;
+	line-height: 1;
 }

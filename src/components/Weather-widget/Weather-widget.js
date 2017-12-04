@@ -51,7 +51,7 @@ class WeatherWidget extends Component {
 						</h1>
 					</div>
 					<div className="weather-city">
-						Forecast for {weather.name}
+						{weather.name}
 					</div>
 					<div className="weather-forecast">
 						<FiveDayForecast

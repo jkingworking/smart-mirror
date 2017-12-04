@@ -5,16 +5,20 @@
 }
 
 .calendar-widget__date {
-	margin-bottom: 1rem;
+	margin-bottom: 0.5em;
 }
 
 .component-calendar-widget .calendar-widget__calendar {
-	font-size: 1rem;
+	font-size: 0.7em;
+}
+
+.DayPicker {
+	width: 100%;
 }
 
 .DayPicker-Month {
 	margin: 0;
-	width: calc(7 * 2.5rem);
+	width: 100%;
 }
 
 .component-calendar-widget .DayPicker-Caption,
@@ -22,8 +26,8 @@
 	display: none;
 }
 
-.component-calendar-widget .DayPicker-Weekday abbr,
-.component-calendar-widget .DayPicker-Day {
+.component-calendar-widget .DayPicker-Weekday abbr {
+	font-weight: 700;
 }
 
 .component-calendar-widget .DayPicker-Day--today {

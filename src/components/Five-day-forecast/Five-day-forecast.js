@@ -15,7 +15,7 @@ function FiveDayForecast ({ className, forecast }) {
 						<div className="forecast-day__day">
 							{day.dayOfWeek}
 						</div>
-						<div className="forecast-day__icon">
+						<div className="forecast-day__icon neon">
 							<WeatherIcon
 								size={50}
 								weather={get(day, 'weather[0]')}
