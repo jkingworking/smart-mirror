@@ -2,6 +2,7 @@
   "name": "smart-mirror",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jkingworking.github.io/smart-mirror/",
   "dependencies": {
     "date-names": "^0.1.11",
     "left-pad": "^1.2.0",
@@ -17,7 +18,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "docs": "yarn build; rimfar docs; mv build docs",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "rimraf": "^2.6.2"
   }
 }

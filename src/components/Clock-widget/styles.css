@@ -1,19 +1,10 @@
 .component-clock-widget {
 	font-weight: 300;
-}
-
-.component-clock-widget .clock__separator {
-	animation: blink 2s infinite;
-	transition: all 1s;
-}
-
-@keyframes blink {
-	0%,
-	100% {
-		opacity: 1;
-	}
-
-	50% {
-		opacity: 0.25;
-	}
+	min-height: 10em;
+	display: flex;
+	background-size: 40rem;
+	background-repeat: no-repeat;
+	background-position: center center;
+	align-items: center;
+	justify-content: center;
 }

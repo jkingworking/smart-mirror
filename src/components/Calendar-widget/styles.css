@@ -22,6 +22,11 @@
 	display: none;
 }
 
+.component-calendar-widget .DayPicker-Weekday abbr,
+.component-calendar-widget .DayPicker-Day {
+	font-weight: 700;
+}
+
 .component-calendar-widget .DayPicker-Day--today {
 	background: white;
 	color: black;

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Widget ({className, children}) {
+function Widget ({className, children, ...rest}) {
 	return (
-		<div className={`component-widget ${className}`}>
+		<div className={`component-widget ${className}`} {...rest}>
 			{children}
 		</div>
 	);

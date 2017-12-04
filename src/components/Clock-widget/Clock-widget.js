@@ -2,12 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import leftPad from 'left-pad';
 import Widget from '../Widget';
-
+import background from './background.gif';
 
 function ClockWidget ({className, date}) {
 	const hrs = date.getHours();
 	return (
-		<Widget className={`component-clock-widget ${className}`}>
+		<Widget className={`component-clock-widget ${className}`}
+			style={{
+				backgroundImage: `url(${background})`
+			}}
+		>
 			<h1 className="clock">
 				<span className="clock__hrs">
 					{hrs ? hrs < 12 ? hrs : hrs - 12 : 12}

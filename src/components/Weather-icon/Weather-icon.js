@@ -23,7 +23,7 @@ WeatherIcon.propTypes = {
 WeatherIcon.defaultProps = {
 	className: '',
 	color: 'white',
-	animate: true,
+	animate: false,
 	isDay: true,
 	weather: {},
 };
