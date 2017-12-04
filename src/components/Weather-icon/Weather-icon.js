@@ -46,7 +46,6 @@ export default WeatherIcon;
 
 function getWeatherStatusIcon (status, isDay = true) {
 	const iconName = weatherIconsList[status] || (isDay ? 'day-sunny' : 'night-clear');
-	console.log('getWeatherStatusIcon - iconName', status, iconName);
 	return iconName.replace('{time}', isDay ? 'day' : 'night');
 }
 
