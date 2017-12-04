@@ -2,9 +2,21 @@
 	font-weight: 300;
 	min-height: 10em;
 	display: flex;
-	background-size: 19em;
-	background-repeat: no-repeat;
-	background-position: center center;
+	position: relative;
 	align-items: center;
 	justify-content: center;
+}
+
+.component-clock-widget .clock {
+	z-index: 2;
+}
+
+.component-clock-widget__background {
+	position: absolute;
+	left: -2em;
+	right: -2em;
+	height: 100%;
+	background-size: 22em;
+	background-repeat: no-repeat;
+	background-position: center center;
 }

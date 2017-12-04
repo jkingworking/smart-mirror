@@ -1,13 +1,13 @@
 @import '../Five-day-forecast/styles.css';
 
 .component-weather-widget {
-	font-size: 1.75rem;
+	font-size: 0.7em;
 }
 
 .weather-city {
 	text-align: center;
-	padding-bottom: 1em;
-	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+	margin-bottom: 0.75em;
 	position: relative;
 }
 

@@ -7,11 +7,13 @@ import background from './background.gif';
 function ClockWidget ({className, date}) {
 	const hrs = date.getHours();
 	return (
-		<Widget className={`component-clock-widget ${className}`}
-			style={{
-				backgroundImage: `url(${background})`
-			}}
-		>
+		<Widget className={`component-clock-widget ${className}`}>
+			<div
+				className="component-clock-widget__background"
+				style={{
+					backgroundImage: `url(${background})`
+				}}
+			/>
 			<h1 className="clock">
 				<span className="clock__hrs">
 					{hrs ? hrs < 12 ? hrs : hrs - 12 : 12}
