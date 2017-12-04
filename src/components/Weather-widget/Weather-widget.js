@@ -65,7 +65,7 @@ class WeatherWidget extends Component {
 	}
 
 	getWeatherNow = async ({ latitude, longitude }) => {
-		const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${openWeatherKey}`, {
+		const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${openWeatherKey}`, {
 			method: 'GET',
 		});
 		const weatherData = await data.json();
@@ -75,7 +75,7 @@ class WeatherWidget extends Component {
 	}
 
 	getWeatherForecast = async ({ latitude, longitude }) => {
-		const data = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${openWeatherKey}`, {
+		const data = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=imperial&appid=${openWeatherKey}`, {
 			method: 'GET',
 		});
 		const weatherData = await data.json();
