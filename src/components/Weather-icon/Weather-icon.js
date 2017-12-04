@@ -15,7 +15,6 @@ const reactAnimatedWeatherIcons = {
 };
 
 function WeatherIcon ({ weather, isDay, animate, ...rest }) {
-	console.log('WeatherIcon - weather', weather, getWeatherStatusIcon(weather.id, isDay));
 	return animate
 		? <ReactAnimatedWeather
 			{...rest}
