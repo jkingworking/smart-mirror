@@ -5,7 +5,7 @@
 }
 
 .calendar-widget__date {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 .component-calendar-widget .calendar-widget__calendar {
@@ -24,16 +24,29 @@
 
 .component-calendar-widget .DayPicker-Weekday abbr,
 .component-calendar-widget .DayPicker-Day {
-	font-weight: 700;
 }
 
 .component-calendar-widget .DayPicker-Day--today {
-	background: white;
-	color: black;
-	border-radius: 50%;
+	color: white;
+	font-weight: 700;
+	text-shadow: 0 0 1em #1041FF,
+	0 0 3em #1041FF,
+	0 0 10em #1041FF,
+	0 0 10em #1041FF,
+	0 0 .4em #8BFDFE,
+	.05em .1em .1em #147280;
+	transform: scale(2);
+	/*color: black;*/
+	/*border-radius: 50%;*/
 }
 
 .component-calendar-widget .DayPicker-Day {
-	width: 1.5em;
-	height: 1.5em;
+
+	/*width: 1.5em;*/
+	/*height: 1.5em;*/
+}
+
+.DayPicker-wrapper {
+	margin-bottom: 0;
+	padding-bottom: 0;
 }

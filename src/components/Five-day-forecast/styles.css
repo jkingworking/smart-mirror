@@ -1,4 +1,6 @@
-.component-five-day-forecast {}
+.component-five-day-forecast {
+	font-size: 0.8em;
+}
 
 .forecast-day {
 	display: flex;
@@ -33,6 +35,15 @@
 .forecast-day__day,
 .forecast-day__icon,
 .forecast-day__temp {
+	flex-basis: 20%;
+	text-align: center;
+}
+
+.forecast-day__icon{
+	flex-basis: 25%;
+}
+
+.forecast-day__day {
 	flex-basis: 25%;
 	text-align: right;
 }

@@ -1,1 +1,11 @@
-.component-widget {}
+.component-widget {
+	max-width: 20rem;
+	margin: 0;
+	width: 100%;
+}
+
+@media (min-width: 800px) {
+	.component-widget {
+
+	}
+}

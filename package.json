@@ -13,12 +13,13 @@
     "react-animated-weather": "^1.0.3",
     "react-day-picker": "^7.0.4",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17"
+    "react-scripts": "1.0.17",
+    "react-weathericons": "^1.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "docs": "yarn build; rimfar docs; mv build docs",
+    "docs": "yarn build; rimraf docs; mv build docs",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

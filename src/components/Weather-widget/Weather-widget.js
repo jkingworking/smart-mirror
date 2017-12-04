@@ -40,13 +40,12 @@ class WeatherWidget extends Component {
 			? (
 				<Widget className={`component-weather-widget ${className}`}>
 					<div className="current-weather neon">
-						<div className="current-weather__icon">
+						<h2 className="current-weather__icon">
 							<WeatherIcon
-								size={150}
 								weather={get(weather, 'weather[0]')}
 								isDay={get(weather, 'dt') < get(weather, 'main.sunset')}
 							/>
-						</div>
+						</h2>
 						<h1 className="current-weather__temp">
 							{getTemp(weather)}
 						</h1>

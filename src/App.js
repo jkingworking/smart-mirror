@@ -13,7 +13,8 @@ class App extends Component {
 	}
 
 	componentDidMount () {
-		setInterval(this.refreshData, 60 * 1000);
+		setInterval(this.refreshData, 60 * 1000); // update the time and weather every min
+		setInterval(this.refreshPage, 60 * 60 * 1000); // hourly hard page refresh
 		this.refreshData();
 	}
 
@@ -28,24 +29,22 @@ class App extends Component {
 		const { date, coordinates } = this.state;
 		return (
 			<div className="App">
-				<div className="column-left">
-					<ClockWidget
-						className="neon"
-						date={date}/>
-					<CalendarWidget
-						date={date}/>
-				</div>
-				<div className="column-right">
-					<WeatherWidget
-						coordinates={coordinates}
-					/>
-				</div>
+				<ClockWidget
+					className="neon"
+					date={date}/>
+				<CalendarWidget
+					date={date}/>
+				<WeatherWidget
+					coordinates={coordinates}
+				/>
 			</div>
 		);
 	}
 
 	getLocation = () => ("geolocation" in navigator) &&
 		navigator.geolocation.getCurrentPosition(position => this.setState({ coordinates: position.coords }), (error) => {});
+
+	refreshPage = () => window.location.reload();
 }
 
 export default App;
