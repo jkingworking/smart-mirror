@@ -10,7 +10,6 @@ function FiveDayForecast ({ className, forecast }) {
 	return (
 		<div className={`component-five-day-forecast ${className}`}>
 			{days.map(day => {
-				console.log('FiveDayForecast - day', day);
 				return (
 					<div key={day.dt} className="forecast-day">
 						<div className="forecast-day__day">
