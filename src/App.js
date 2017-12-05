@@ -28,13 +28,14 @@ class App extends Component {
 		const { date, coordinates } = this.state;
 		return (
 			<div className="App">
-				<div className="shine" />
 				<ClockWidget
 					className="app-widget neon"
 					date={date}/>
 				<CalendarWidget
+					className="sub-widget"
 					date={date}/>
 				<WeatherWidget
+					className="sub-widget"
 					coordinates={coordinates}
 				/>
 			</div>
