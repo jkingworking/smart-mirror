@@ -6,20 +6,28 @@
 .App {
 	background: #000;
 	color: #fff;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
 	font-size: 2.3rem;
 	max-height: 100vh;
 	min-height: 100vh;
 	overflow: hidden;
-	padding-left: 1em;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+@media (max-width: 899px) {
+	.App {
+		padding-left: 1em;
+	}
 }
 
 @media (min-width: 900px) {
 	.App {
-		justify-content: center;
+		/*min-height: auto;*/
+		flex-direction: row;
+		/*justify-content: center;*/
+		align-items: center;
+		justify-content: space-around;
 	}
 }
 
@@ -33,4 +41,9 @@ h2 {
 	font-size: 3em;
 	margin: 0;
 	line-height: 1;
+}
+
+
+.app-widget {
+
 }

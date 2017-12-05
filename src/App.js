@@ -30,11 +30,13 @@ class App extends Component {
 		return (
 			<div className="App">
 				<ClockWidget
-					className="neon"
+					className="app-widget neon"
 					date={date}/>
 				<CalendarWidget
+					className="app-widget"
 					date={date}/>
 				<WeatherWidget
+					className="app-widget"
 					coordinates={coordinates}
 				/>
 			</div>
