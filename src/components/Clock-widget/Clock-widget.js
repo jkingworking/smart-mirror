@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import leftPad from 'left-pad';
 import Widget from '../Widget';
-import background from './background.gif';
+import background from './background-alt.gif';
 
 function ClockWidget ({className, date}) {
 	const hrs = date.getHours();
