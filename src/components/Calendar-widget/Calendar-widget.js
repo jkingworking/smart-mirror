@@ -8,7 +8,7 @@ import Widget from '../Widget';
 function CalendarWidget ({ className, date }) {
 	return (
 		<Widget className={`component-calendar-widget ${className}`}>
-			<div className="calendar-widget__date">
+			<div className="calendar-widget__date underline">
 				{days[ date.getDay() ]}, {months[ date.getMonth() ]} {ordinal(date.getDate())}
 			</div>
 			<div className="calendar-widget__calendar">

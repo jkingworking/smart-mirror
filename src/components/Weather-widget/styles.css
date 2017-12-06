@@ -11,23 +11,6 @@
 	position: relative;
 }
 
-.weather-city::after {
-	content: '';
-	right: 0;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background: white;
-	border-radius: 1em;
-	height: 3px;
-	box-shadow: 0 0 1em #1041FF,
-	0 0 3em #1041FF,
-	0 0 10em #1041FF,
-	0 0 10em #1041FF,
-	0 0 .4em #8BFDFE,
-	.05em .1em .1em #147280;
-}
-
 .current-weather {
 	display: flex;
 	align-items: center;

@@ -11,12 +11,10 @@
 	z-index: 2;
 }
 
-.component-clock-widget__background {
-	position: absolute;
-	left: -2em;
-	right: -2em;
-	height: 100%;
-	background-size: 18em;
-	background-repeat: no-repeat;
-	background-position: center center;
+.component-clock-widget__video {
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    height: auto;
+    transform: translateX(-50%) scale(1.7);
 }

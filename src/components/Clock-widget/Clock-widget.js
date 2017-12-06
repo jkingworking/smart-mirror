@@ -2,18 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import leftPad from 'left-pad';
 import Widget from '../Widget';
-import background from './background-alt.gif';
+// import background from './background-alt.gif';
+import backgroundMov from './background-alt.mp4';
 
 function ClockWidget ({className, date}) {
 	const hrs = date.getHours();
 	return (
 		<Widget className={`component-clock-widget ${className}`}>
-			<div
-				className="component-clock-widget__background"
-				style={{
-					backgroundImage: `url(${background})`
-				}}
-			/>
+      <video className="component-clock-widget__video" autoPlay loop>
+        <source src={backgroundMov} type="video/mp4" />
+      </video>
 			<h1 className="clock">
 				<span className="clock__hrs">
 					{hrs ? hrs < 12 ? hrs : hrs - 12 : 12}

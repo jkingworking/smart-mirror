@@ -43,21 +43,60 @@ h2 {
 	line-height: 1;
 }
 
-.sub-widget {
-	animation: animate-pop 20s infinite;
+.underline {
+    padding-bottom: 1rem;
+    position: relative;
 }
 
-@keyframes animate-pop {
-	0%, 58%, 100%  {
-		opacity: 0;
-		transform: scale(0.5);
-	}
-	5%, 55% {
-		opacity: 0.9;
-		transform: scale(1.1);
-	}
-	8%, 50% {
-		opacity: 1;
-		transform: scale(1);
-	}
+.underline::after {
+    content: '';
+    right: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 1em;
+    height: 3px;
+    box-shadow: 0 0 1em #1041FF,
+    0 0 3em #1041FF,
+    0 0 10em #1041FF,
+    0 0 10em #1041FF,
+    0 0 .4em #8BFDFE,
+    .05em .1em .1em #147280;
+}
+
+
+.sub-widget {
+	animation: animate-screen-saver 60s infinite;
+}
+
+@keyframes animate-screen-saver {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    1.5% {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+    2% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90.5% {
+        opacity: 0.9;
+        transform: scale(1.1);
+    }
+    92% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }

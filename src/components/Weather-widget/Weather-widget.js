@@ -50,7 +50,7 @@ class WeatherWidget extends Component {
 							{getTemp(weather)}
 						</h1>
 					</div>
-					<div className="weather-city">
+					<div className="weather-city underline">
 						{weather.name}
 					</div>
 					<div className="weather-forecast">
