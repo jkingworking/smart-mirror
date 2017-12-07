@@ -16,5 +16,6 @@
     z-index: 0;
     left: 50%;
     height: auto;
-    transform: translateX(-50%) scale(1.7);
+    /*transform: translateX(-50%) scale(1.7);*/
+    transform: translateX(-50%) scale(0.85);
 }
