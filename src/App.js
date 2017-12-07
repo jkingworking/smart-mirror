@@ -27,7 +27,7 @@ class App extends Component {
 	render () {
 		const { date, coordinates } = this.state;
 		return (
-			<div className="App">
+			<div className="App" onClick={this.goFullScreen}>
 				<ClockWidget
 					className="app-widget neon"
 					date={date}/>
