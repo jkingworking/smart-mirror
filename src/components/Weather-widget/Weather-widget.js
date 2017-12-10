@@ -39,20 +39,19 @@ class WeatherWidget extends Component {
 		return get(this.state, 'weather.dt')
 			? (
 				<Widget className={`component-weather-widget ${className}`}>
-					<div className="current-weather neon">
-						<h2 className="current-weather__icon">
+					<div className="current-weather underline neon">
+						<h1 className="current-weather__icon">
 							<WeatherIcon
-								weather={get(weather, 'weather[0]')}
-								isDay={get(weather, 'dt') < get(weather, 'main.sunset')}
+								weather={weather}
 							/>
-						</h2>
+						</h1>
 						<h1 className="current-weather__temp">
 							{getTemp(weather)}
 						</h1>
 					</div>
-					<div className="weather-city underline">
+					<h2 className="weather-city neon">
 						{weather.name}
-					</div>
+					</h2>
 					<div className="weather-forecast">
 						<FiveDayForecast
 							forecast={forecast}

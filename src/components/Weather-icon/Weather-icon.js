@@ -1,28 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactAnimatedWeather from 'react-animated-weather';
-import WeatherIcons from 'react-weathericons';
 import weatherIconsList from '../../helpers/weatherIconsList';
+import {get, head} from 'lodash';
 
-const reactAnimatedWeatherIcons = {
-	RAIN: 'RAIN',
-	SNOW: 'SNOW',
-	FOG: 'FOG',
-	PARTLY_CLOUDY_NIGHT: 'PARTLY_CLOUDY_NIGHT',
-	PARTLY_CLOUDY_DAY: 'PARTLY_CLOUDY_DAY',
-	CLEAR_NIGHT: 'CLEAR_NIGHT',
-	CLEAR_DAY: 'CLEAR_DAY',
-};
+function WeatherIcon ({ weather, animate, ...rest }) {
+	const weatherData = head(get(weather, 'weather', []));
+	const dt = get(weather, 'dt');
+	const sys = get(weather, 'sys', {});
+	const isToday = Math.round((new Date()).getTime() / 1000) >= dt;
+	const isBeforeSunrise = dt < sys.sunrise;
+	const isBeforeSunset = dt < sys.sunset;
+	const isDay = !isToday || (!isBeforeSunrise && isBeforeSunset);
 
-function WeatherIcon ({ weather, isDay, animate, ...rest }) {
-	return animate
-		? <ReactAnimatedWeather
-			{...rest}
-			animate={animate}
-			icon={getWeatherIcon(weather.id, isDay, reactAnimatedWeatherIcons)}
-		/>
-		: <WeatherIcons
-			name={getWeatherStatusIcon(weather.id, isDay)}
+	return <i
+			className={`pe-is-w-${getWeatherStatusIcon(weatherData.id, isDay)}`}
 		/>
 }
 
@@ -38,33 +29,12 @@ WeatherIcon.defaultProps = {
 	className: '',
 	color: 'white',
 	animate: false,
-	isDay: true,
 	weather: {},
 };
 
 export default WeatherIcon;
 
 function getWeatherStatusIcon (status, isDay = true) {
-	const iconName = weatherIconsList[status] || (isDay ? 'day-sunny' : 'night-clear');
+	const iconName = weatherIconsList[status] || (isDay ? 'sun-1' : 'moon-1');
 	return iconName.replace('{time}', isDay ? 'day' : 'night');
-}
-
-function getWeatherIcon (status, isDay = true, icons) {
-	const weatherCat = Number(String(status).substr(0, 1));
-	switch (true) {
-		case weatherCat <= 5:
-			return icons.RAIN;
-		case weatherCat === 6:
-			return icons.SNOW;
-		case weatherCat === 7:
-			return icons.FOG;
-		case (status > 800 && !isDay):
-			return icons.PARTLY_CLOUDY_NIGHT;
-		case status > 800 :
-			return icons.PARTLY_CLOUDY_DAY;
-		case !isDay:
-			return icons.CLEAR_NIGHT;
-		default:
-			return icons.CLEAR_DAY;
-	}
 }

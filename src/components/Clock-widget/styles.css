@@ -1,14 +1,33 @@
 .component-clock-widget {
 	font-weight: 300;
-	min-height: 10em;
+	height: 75vmin;
 	display: flex;
 	position: relative;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
-.component-clock-widget .clock {
+.component-clock-widget .clock,
+.component-clock-widget .day,
+.component-clock-widget .date {
 	z-index: 2;
+	margin: 0;
+}
+
+.component-clock-widget .clock::after {
+	opacity: 0.5;
+}
+
+.component-clock-widget .day {
+	margin-top: 0.25em;
+}
+
+.component-clock-widget .date {
+	font-family: 'Open Sans';
+	font-weight: 700;
+	margin-top: 0.25em;
+	margin-bottom: 1rem;
 }
 
 .component-clock-widget__video {
@@ -17,5 +36,5 @@
     left: 50%;
     height: auto;
     /*transform: translateX(-50%) scale(1.7);*/
-    transform: translateX(-50%) scale(0.85);
+    transform: translateX(-50%) scale(1.2);
 }

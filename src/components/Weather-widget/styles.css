@@ -1,29 +1,28 @@
 @import '../Five-day-forecast/styles.css';
 
 .component-weather-widget {
-	font-size: 0.7em;
+	/*font-size: 0.7em;*/
+	flex: 1;
 }
 
 .weather-city {
 	text-align: center;
-	padding-bottom: 0.5em;
-	margin-bottom: 0.75em;
+	margin: 0.5em 0;
 	position: relative;
 }
 
 .current-weather {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 }
 
-@media (min-width: 768px) {
-	.current-weather {
-		justify-content: space-around;
-	}
+.current-weather::after {
+	opacity: 0.5;
 }
 
 .current-weather__icon {
+	margin-right: 0.25em;
 }
 
 .current-weather__temp {

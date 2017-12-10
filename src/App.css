@@ -15,12 +15,6 @@
 	flex-direction: column;
 }
 
-@media (max-width: 899px) {
-	.App {
-		padding-left: 1em;
-	}
-}
-
 @media (min-width: 900px) {
 	.App {
 		/*min-height: auto;*/
@@ -38,8 +32,16 @@ h1 {
 }
 
 h2 {
-	font-size: 3em;
+	font-size: 1.25em;
 	margin: 0;
+	line-height: 1;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+h3 {
+	font-size: 0.6em;
 	line-height: 1;
 }
 
@@ -66,7 +68,7 @@ h2 {
 }
 
 .sub-widget {
-	animation: animate-screen-saver 60s infinite;
+	/*animation: animate-screen-saver 60s infinite;*/
 }
 
 @keyframes animate-screen-saver {

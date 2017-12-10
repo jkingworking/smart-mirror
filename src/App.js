@@ -13,8 +13,10 @@ class App extends Component {
 	}
 
 	componentDidMount () {
-		setInterval(this.refreshData, 60 * 1000); // update the time and weather every min
 		this.refreshData();
+
+		setInterval(this.refreshClock, 30 * 1000); // update the time every 30 sec
+		setInterval(this.refreshData, 2 * 60 * 1000); // update the weather every 2 min
 	}
 
 	refreshData = () => {
@@ -31,9 +33,9 @@ class App extends Component {
 				<ClockWidget
 					className="app-widget neon"
 					date={date}/>
-				<CalendarWidget
-					className="sub-widget"
-					date={date}/>
+				{/*<CalendarWidget*/}
+					{/*className="sub-widget"*/}
+					{/*date={date}/>*/}
 				<WeatherWidget
 					className="sub-widget"
 					coordinates={coordinates}
