@@ -46,7 +46,7 @@ class FiveDayForecast extends Component {
 	}
 
 	componentDidMount() {
-		this.rotationInterval = setInterval(this.rotateDay, 2 * 1000);
+		// this.rotationInterval = setInterval(this.rotateDay, 5 * 1000);
 	}
 
 	componentWillUnmount() {

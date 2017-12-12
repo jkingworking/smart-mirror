@@ -5,12 +5,15 @@ import {get, head} from 'lodash';
 
 function WeatherIcon ({ weather, animate, ...rest }) {
 	const weatherData = head(get(weather, 'weather', []));
-	const dt = get(weather, 'dt');
-	const sys = get(weather, 'sys', {});
-	const isToday = Math.round((new Date()).getTime() / 1000) >= dt;
-	const isBeforeSunrise = dt < sys.sunrise;
-	const isBeforeSunset = dt < sys.sunset;
-	const isDay = !isToday || (!isBeforeSunrise && isBeforeSunset);
+	const { sunrise, sunset } = get(weather, 'sys', {});
+	const now = new Date();
+	const sunriseDate = new Date(sunrise * 1000);
+	const sunsetDate = new Date(sunset * 1000);
+	const isToday = ymd(sunriseDate) === ymd(now);
+
+	const isDay = now < sunriseDate
+		? false
+		: (isToday && now < sunsetDate) || !isToday;
 
 	return <i
 			className={`pe-is-w-${getWeatherStatusIcon(weatherData.id, isDay)}`}
@@ -36,5 +39,9 @@ export default WeatherIcon;
 
 function getWeatherStatusIcon (status, isDay = true) {
 	const iconName = weatherIconsList[status] || (isDay ? 'sun-1' : 'moon-1');
-	return iconName.replace('{time}', isDay ? 'day' : 'night');
+	return iconName.replace('{time}', isDay ? 'day' : 'night').replace('{body}', isDay ? 'sun' : 'moon');
+}
+
+function ymd(dt) {
+    return `${dt.getFullYear()}${dt.getMonth()}{${dt.getDate()}}`;
 }

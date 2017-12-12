@@ -53,7 +53,7 @@ export default {
 	771: 'fog-1',
 	781: 'tornado-1',
 
-	800: 'sun-1',
+	800: '{body}-1',
 
 	801: 'partly-cloudy-{time}',
 	802: 'partly-cloudy-{time}',
