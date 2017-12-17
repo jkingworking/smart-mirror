@@ -13,19 +13,19 @@ html, body {
 }
 
 .neon {
-  text-shadow: 0 0 1em #1041FF,
-  0 0 3em #1041FF,
-  0 0 10em #1041FF,
-  0 0 10em #1041FF,
-  0 0 .4em #8BFDFE,
-  .05em .1em .1em #147280;
+  text-shadow: 0 0 1rem #1041FF,
+  0 0 3rem #1041FF,
+  0 0 10rem #1041FF,
+  0 0 10rem #1041FF,
+  0 0 .4rem #8BFDFE,
+  .05rem .1rem .1rem #147280;
 }
 
 .neonBox {
-  box-shadow: 0 0 1em #1041FF,
-  0 0 3em #1041FF,
-  0 0 10em #1041FF,
-  0 0 10em #1041FF,
-  0 0 .4em #8BFDFE,
-  .05em .1em .1em #147280;
+  box-shadow: 0 0 1rem #1041FF,
+  0 0 3rem #1041FF,
+  0 0 10rem #1041FF,
+  0 0 10rem #1041FF,
+  0 0 .4rem #8BFDFE,
+  .05rem .1rem .1rem #147280;
 }
