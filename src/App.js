@@ -39,7 +39,14 @@ class App extends Component {
 				<WeatherWidget
 					className="sub-widget"
 					coordinates={coordinates}
+					showToday={true}
 				/>
+				<WeatherWidget
+					className="sub-widget"
+					coordinates={coordinates}
+					show5Day={true}
+				/>
+
 			</div>
 		);
 	}

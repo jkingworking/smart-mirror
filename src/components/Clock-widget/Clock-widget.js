@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import leftPad from 'left-pad';
 import Widget from '../Widget';
 import {days} from 'date-names'
-import backgroundMov from './waves.mp4';
+// import backgroundMov from './waves.mp4';
 
 function ClockWidget ({className, date}) {
 	const hrs = date.getHours();
@@ -11,9 +11,9 @@ function ClockWidget ({className, date}) {
 	// const ordinal = hrs < 12 ? 'am' : 'pm';
 	return (
 		<Widget className={`component-clock-widget ${className}`}>
-      <video className="component-clock-widget__video" autoPlay loop>
-        <source src={backgroundMov} type="video/mp4" />
-      </video>
+      {/*<video className="component-clock-widget__video" autoPlay loop>*/}
+        {/*<source src={backgroundMov} type="video/mp4" />*/}
+      {/*</video>*/}
 			<h1 className="clock underline">
 				<span className="clock__hrs">{hour}</span>
 				<span className="clock__separator">:</span>

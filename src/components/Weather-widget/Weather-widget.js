@@ -15,10 +15,14 @@ class WeatherWidget extends Component {
 			latitude: PropTypes.number,
 			longitude: PropTypes.number,
 		}),
+		showToday: PropTypes.bool,
+		show5Day: PropTypes.bool,
 	};
 
 	static defaultProps = {
-		className: ''
+		className: '',
+		showToday: false,
+		show5Day: false,
 	};
 
 	state = {
@@ -34,29 +38,35 @@ class WeatherWidget extends Component {
 	}
 
 	render () {
-		const { className } = this.props;
+		const { className, showToday, show5Day } = this.props;
 		const { weather, forecast } = this.state;
 		return get(this.state, 'weather.dt')
 			? (
 				<Widget className={`component-weather-widget ${className}`}>
-					<div className="current-weather underline neon">
-						<h1 className="current-weather__icon">
-							<WeatherIcon
-								weather={weather}
+					{showToday && (
+						<div>
+							<div className="current-weather underline neon">
+								<h1 className="current-weather__icon">
+									<WeatherIcon
+										weather={weather}
+									/>
+								</h1>
+								<h1>
+									<span className="current-weather__temp">{getTemp(weather)}</span>
+								</h1>
+							</div>
+							<h2 className="weather-city neon">
+								{weather.name}
+							</h2>
+						</div>
+					)}
+					{show5Day && (
+						<div className="weather-forecast">
+							<FiveDayForecast
+								forecast={forecast}
 							/>
-						</h1>
-						<h1 className="current-weather__temp">
-							{getTemp(weather)}
-						</h1>
-					</div>
-					<h2 className="weather-city neon">
-						{weather.name}
-					</h2>
-					<div className="weather-forecast">
-						<FiveDayForecast
-							forecast={forecast}
-						/>
-					</div>
+						</div>
+					)}
 				</Widget>
 			)
 			: null;

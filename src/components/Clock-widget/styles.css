@@ -1,6 +1,6 @@
 .component-clock-widget {
 	font-weight: 300;
-	height: 75vmin;
+	/*height: 75vmin;*/
 	display: flex;
 	position: relative;
 	align-items: center;

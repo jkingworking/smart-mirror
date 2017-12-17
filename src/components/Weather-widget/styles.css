@@ -2,7 +2,7 @@
 
 .component-weather-widget {
 	/*font-size: 0.7em;*/
-	flex: 1;
+	/*flex: 1;*/
 }
 
 .weather-city {
@@ -26,4 +26,5 @@
 }
 
 .current-weather__temp {
+	font-size: 0.6em;
 }
