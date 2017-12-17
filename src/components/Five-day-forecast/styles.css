@@ -85,6 +85,11 @@
 	opacity: calc(var(--opcAmt) * 1);
 }
 
+.forecast-day:nth-child(6) {
+	/*transform: scale(calc(var(--amt) * 1));*/
+	opacity: calc(var(--opcAmt) * 0.5);
+}
+
 /*.active-0 .forecast-day:nth-child(3),*/
 /*.active-0 .forecast-day:nth-child(4),*/
 /*.active-0 .forecast-day:nth-child(5),*/
