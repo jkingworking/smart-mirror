@@ -33,7 +33,7 @@
 
 .forecast-day__icon{
 	font-size: 1.5em;
-	/*margin: 0.25em 0;*/
+	padding: 0.1em 0.5em;
 }
 
 .forecast-day__day {
