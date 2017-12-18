@@ -25,7 +25,7 @@ function ClockWidget ({className, date}) {
 				{days[date.getDay()]}
 			</h2>
 			<h3 className="date">
-				{`${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`}
+				{`${date.getMonth() + 1}.${date.getDate()}.${date.getFullYear()}`}
 			</h3>
 		</Widget>
 	);
