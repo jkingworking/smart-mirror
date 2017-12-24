@@ -8,7 +8,7 @@ import WeatherWidget from './components/Weather-widget';
 class App extends Component {
 	state = {
 		date: new Date(),
-		coordinates: {}
+		coordinates: false
 	}
 
 	componentDidMount () {

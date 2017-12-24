@@ -75,7 +75,7 @@ class FiveDayForecast extends Component {
 	}
 
 	render () {
-		const { className, forecast } = this.props;
+		const { className } = this.props;
 		const { activeIndex, days } = this.state;
 		return (
 			<div className={`component-five-day-forecast ${className} active-${activeIndex}`}>
