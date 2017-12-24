@@ -128,7 +128,7 @@ class WeatherWidget extends Component {
 			return;
 		}
 
-		const mapQuery = await fetch(`http://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true`, {
+		const mapQuery = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&sensor=true`, {
 			method: 'GET'
 		});
 		const mapData = await mapQuery.json();
