@@ -3,17 +3,13 @@ import PropTypes from 'prop-types';
 import leftPad from 'left-pad';
 import Widget from '../Widget';
 import {days} from 'date-names'
-// import backgroundMov from './waves.mp4';
+import HolidayGreeting from '../Holiday-greeting';
 
 function ClockWidget ({className, date}) {
 	const hrs = date.getHours();
 	const hour = hrs ? hrs <= 12 ? hrs : hrs - 12 : 12;
-	// const ordinal = hrs < 12 ? 'am' : 'pm';
 	return (
 		<Widget className={`component-clock-widget ${className}`}>
-      {/*<video className="component-clock-widget__video" autoPlay loop>*/}
-        {/*<source src={backgroundMov} type="video/mp4" />*/}
-      {/*</video>*/}
 			<h1 className="clock underline">
 				<span className="clock__hrs">{hour}</span>
 				<span className="clock__separator">:</span>
@@ -27,6 +23,10 @@ function ClockWidget ({className, date}) {
 			<h3 className="date">
 				{`${date.getMonth() + 1}.${date.getDate()}.${date.getFullYear()}`}
 			</h3>
+			<HolidayGreeting
+				className="neon"
+				date={date}
+			/>
 		</Widget>
 	);
 }

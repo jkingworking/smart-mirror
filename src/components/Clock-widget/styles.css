@@ -6,6 +6,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	margin-bottom: 1rem;
 }
 
 .component-clock-widget .clock,
@@ -27,7 +28,6 @@
 	font-family: 'Open Sans';
 	font-weight: 700;
 	margin-top: 0.25em;
-	margin-bottom: 1rem;
 }
 
 .component-clock-widget__video {

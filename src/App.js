@@ -3,7 +3,6 @@ import './App.css';
 
 // Components
 import ClockWidget from './components/Clock-widget';
-import CalendarWidget from './components/Calendar-widget';
 import WeatherWidget from './components/Weather-widget';
 
 class App extends Component {

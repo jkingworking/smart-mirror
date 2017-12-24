@@ -1,0 +1,7 @@
+{
+  "name": "Holiday-greeting",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Holiday-greeting.js",
+  "style": "./styles.css"
+}

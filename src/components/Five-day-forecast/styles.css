@@ -60,87 +60,31 @@
 }
 
 :root{
-	--amt: 0.4;
+	--amt: 1;
 	--opcAmt: 1 / 5;
 }
 
 .forecast-day:nth-child(1) {
-	/*transform: scale(calc(var(--amt) * 5));*/
-	opacity: calc(var(--opcAmt) * 5);
+	opacity: 1;
+	/*transform: scale(1);*/
 }
 .forecast-day:nth-child(2) {
-	/*transform: scale(calc(var(--amt) * 4));*/
-	opacity: calc(var(--opcAmt) * 4);
+	opacity: 0.9;
+	/*transform: scale(0.975);*/
 }
 .forecast-day:nth-child(3) {
-	/*transform: scale(calc(var(--amt) * 3));*/
-	opacity: calc(var(--opcAmt) * 3);
+	opacity: 0.725;
+	/*transform: scale(0.9125);*/
 }
 .forecast-day:nth-child(4) {
-	/*transform: scale(calc(var(--amt) * 2));*/
-	opacity: calc(var(--opcAmt) * 2);
+	opacity: 0.5625;
+	/*transform: scale(0.85625);*/
 }
 .forecast-day:nth-child(5) {
-	/*transform: scale(calc(var(--amt) * 1));*/
-	opacity: calc(var(--opcAmt) * 1);
+	opacity: 0.4;
+	/*transform: scale(0.8);*/
 }
-
 .forecast-day:nth-child(6) {
-	/*transform: scale(calc(var(--amt) * 1));*/
-	opacity: calc(var(--opcAmt) * 0.5);
+	opacity: 0.25;
+	/*transform: scale(0.74);*/
 }
-
-/*.active-0 .forecast-day:nth-child(3),*/
-/*.active-0 .forecast-day:nth-child(4),*/
-/*.active-0 .forecast-day:nth-child(5),*/
-/*.active-0 .forecast-day:nth-child(6),*/
-/*.active-0 .forecast-day:nth-child(7){*/
-	/*!*transform: scaleX(0);*!*/
-	/*!*max-width: 0;*!*/
-	/*opacity: 0.25;*/
-/*}*/
-
-/*.active-1 .forecast-day:nth-child(4),*/
-/*.active-1 .forecast-day:nth-child(5),*/
-/*.active-1 .forecast-day:nth-child(6),*/
-/*.active-1 .forecast-day:nth-child(7){*/
-	/*!*transform: scaleX(0);*!*/
-	/*!*max-width: 0;*!*/
-	/*opacity: 0.25;*/
-/*}*/
-
-/*.active-2 .forecast-day:nth-child(1),*/
-/*.active-2 .forecast-day:nth-child(5),*/
-/*.active-2 .forecast-day:nth-child(6),*/
-/*.active-2 .forecast-day:nth-child(7){*/
-	/*!*transform: scaleX(0);*!*/
-	/*!*max-width: 0;*!*/
-	/*opacity: 0.25;*/
-/*}*/
-
-/*.active-3 .forecast-day:nth-child(1),*/
-/*.active-3 .forecast-day:nth-child(2),*/
-/*.active-3 .forecast-day:nth-child(6),*/
-/*.active-3 .forecast-day:nth-child(7){*/
-	/*!*transform: scaleX(0);*!*/
-	/*!*max-width: 0;*!*/
-	/*opacity: 0.25;*/
-/*}*/
-
-/*.active-4 .forecast-day:nth-child(1),*/
-/*.active-4 .forecast-day:nth-child(2),*/
-/*.active-4 .forecast-day:nth-child(3),*/
-/*.active-4 .forecast-day:nth-child(7){*/
-	/*!*transform: scaleX(0);*!*/
-	/*!*max-width: 0;*!*/
-	/*opacity: 0.25;*/
-/*}*/
-
-/*.active-5 .forecast-day:nth-child(1),*/
-/*.active-5 .forecast-day:nth-child(2),*/
-/*.active-5 .forecast-day:nth-child(3),*/
-/*.active-5 .forecast-day:nth-child(4){*/
-	/*!*transform: scaleX(0);*!*/
-	/*!*max-width: 0;*!*/
-	/*opacity: 0.25;*/
-/*}*/

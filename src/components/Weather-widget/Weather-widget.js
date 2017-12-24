@@ -27,7 +27,9 @@ class WeatherWidget extends Component {
 
 	state = {
 		weather: {},
-		forecast: {}
+		forecast: {},
+		weatherUpdated: new Date(),
+		forecastUpdated: new Date(),
 	}
 
 	componentWillReceiveProps (props) {
@@ -39,11 +41,13 @@ class WeatherWidget extends Component {
 
 	render () {
 		const { className, showToday, show5Day } = this.props;
-		const { weather, forecast } = this.state;
+		const { weather, forecast, weatherUpdated, forecastUpdated } = this.state;
+		const today = new Date();
+
 		return get(this.state, 'weather.dt')
 			? (
 				<Widget className={`component-weather-widget ${className}`}>
-					{showToday && (
+					{showToday && weatherUpdated.getDate() === today.getDate() && (
 						<div>
 							<div className="current-weather underline neon">
 								<h1 className="current-weather__icon">
@@ -60,7 +64,7 @@ class WeatherWidget extends Component {
 							</h2>
 						</div>
 					)}
-					{show5Day && (
+					{show5Day && forecastUpdated.getDate() === today.getDate() && (
 						<div className="weather-forecast">
 							<FiveDayForecast
 								forecast={forecast}
@@ -79,7 +83,8 @@ class WeatherWidget extends Component {
 		});
 		const weatherData = await data.json();
 		this.setState({
-			weather: weatherData
+			weather: weatherData,
+			weatherUpdated: new Date(),
 		});
 	}
 
@@ -90,7 +95,8 @@ class WeatherWidget extends Component {
 		const weatherData = await data.json();
 
 		this.setState({
-			forecast: weatherData
+			forecast: weatherData,
+			forecastUpdated: new Date(),
 		});
 	}
 }
